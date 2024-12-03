@@ -242,13 +242,18 @@ a {
 }
 
 .card p {
+    font-size: 20px;
     color: white;
     margin: 10px 0;
 }
 
+.card a {
+    font-size: 20px;
+}
+
 .card img {
     border-radius: 15px;
-    width: 350px;
+    width: 300px;
 }
 
 #typingContainer {
@@ -267,3 +272,7 @@ a {
         border-color: transparent;
     }
 }
+
+
+
+
