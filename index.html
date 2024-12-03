@@ -169,27 +169,42 @@
         document.addEventListener("DOMContentLoaded", () => {
             const container = document.getElementById("typingContainer");
 
-            // 타이핑할 텍스트 정의
             const text = `
                 Hi My name is kang baek ho
             `;
 
-            let index = 0; // 현재 출력 중인 위치
+            let index = 0; 
 
             function type() {
                 if (index < text.length) {
-                    container.innerHTML += text[index]; // 한 글자씩 추가
+                    container.innerHTML += text[index]; 
                     index++;
-                    setTimeout(type, 45); // 출력 속도 조절
+                    setTimeout(type, 45);
                 } else {
-                    // 타이핑 완료 후 깜빡임 제거
-                    container.style.animation = "none"; // 깜빡임 애니메이션 중지
-                    container.style.borderRight = "none"; // 보더 제거
+                    container.style.animation = "none"; 
+                    container.style.borderRight = "none"; 
                 }
             }
 
-            type(); // 타이핑 효과 시작
+            type(); 
         });
+        const ham = document.getElementById('ham');
+        let count = false;
+        ham.addEventListener('click', ()=> {
+            if (count) {
+                const aside = document.querySelector('aside');
+                aside.style.display = 'block';
+                document.getElementById('class').style.marginLeft = '405px';
+                document.getElementById('numberbar').style.left = '391px';
+                count = false
+            } else {
+                const aside = document.querySelector('aside');
+                aside.style.display = 'none';
+                document.getElementById('class').style.marginLeft = '40px';
+                document.getElementById('numberbar').style.left = '30px';
+                count = true
+            }
+        })
     </script>
     
 </body>
